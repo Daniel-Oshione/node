@@ -30,3 +30,25 @@ if (y < z) return -1;
 return 0;
 });
 console.log(numbers);
+
+//counter
+let startCounter = 0;
+let stopCounter = 10;
+//  setInterval(() => {
+//     for(let i = 0; i <= stopCounter; i++){
+//         startCounter++;
+//         console.log(startCounter);
+//     }
+//     console.log('stop!');
+//     }, 1000);
+
+
+//realtime counter
+let output = setInterval(() =>{
+    startCounter++
+    console.log(startCounter);
+    if(startCounter === stopCounter){
+        clearInterval(output)
+        console.log(`interval clear at: ${startCounter}`);
+    } 
+}, 1);
